@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hebrew Course for Beginners</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('background1.png');
+
+            background-repeat: repeat;
+            background-size: 400px 200px;
+            
+            line-height: 1.6;
+            color: #334155;
+        }
+        
+        .container {
+            max-width: 750px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #3b95f6 0%, #1f32dc 100%);
+            color: white;
+            padding: 50px 35px;
+            text-align: center;
+            
+        }
+        img {border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .header h1 {
+            font-size: 2.9em;
+            margin-bottom: 10px;
+            font-weight: 500;
+           text-shadow: 
+    -0px 0px 0 black,
+     0px 0px 0 black,
+    -1px  1px 0 rgb(11, 9, 93),
+     0px  0px 0 black;
+        }
+        
+        .header .subtitle {
+            font-size: 1.3em;
+            font-weight: 400;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 40px 35px;
+        }
+        
+        .intro {
+            font-size: 1.25em;
+            color: #475569;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+        
+        .quick-facts {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            padding: 25px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .quick-facts p {
+            margin: 8px 0;
+            font-size: 1.25em;
+            color: #475569;
+        }
+        
+        .quick-facts strong {
+            color: #1e40af;
+            font-weight: 600;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: #2563eb;
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        .topics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .topic-item {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 1.25em;
+            color: #475569;
+            text-align: left;
+        }
+        
+        .pricing-container {
+            display: flex;
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .pricing-card {
+            flex: 1;
+            background: #f8fafc;
+            padding: 30px 25px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+        
+        .pricing-card:hover {
+            border-color: #3b82f6;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
+        }
+        
+        .pricing-card h3 {
+            color: #2563eb;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .pricing-card .price {
+            font-size: 3em;
+            font-weight: 600;
+            color: #1e293b;
+            margin: 12px 0;
+        }
+        
+        .pricing-card .per-lesson {
+            font-size: 1em;
+            color: #64748b;
+            margin-bottom: 18px;
+        }
+        
+        .pricing-card .info {
+            font-size: 1.05em;
+            color: #475569;
+            margin: 6px 0;
+        }
+        
+        .pricing-card .discount {
+            margin-top: 18px;
+            padding-top: 18px;
+            border-top: 2px dashed #cbd5e1;
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        .special-offer {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            padding: 18px;
+            text-align: center;
+            margin: 30px 0;
+            border-radius: 8px;
+            font-size: 1.15em;
+            font-weight: 500;
+        }
+        
+        .payment-info {
+            text-align: center;
+            font-size: 1.05em;
+            color: #475569;
+            margin-top: 25px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            padding: 45px 35px;
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            border-radius: 0 0 12px 12px;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            font-size: 2.2em;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        
+        .cta-section p {
+            font-size: 1.15em;
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #2563eb;
+            padding: 16px 45px;
+            font-size: 1.25em;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+        }
+        
+        .contact-info {
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            font-size: 1.05em;
+        }
+        
+        .contact-info p {
+            margin: 8px 0;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.6);
+        }
+        
+        .contact-info a:hover {
+            border-bottom-color: white;
+        }
+        
+        @media (max-width: 700px) {
+            .container {
+                margin: 20px;
+                border-radius: 8px;
+            }
+            
+            .header {
+                padding: 40px 25px;
+            }
+            
+            .header h1 {
+                font-size: 2.2em;
+            }
+            
+            .content {
+                padding: 30px 25px;
+            }
+            
+            .pricing-container {
+                flex-direction: column;
+            }
+            
+            .cta-section {
+                border-radius: 0 0 8px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo1.png" width="400" >
+            <h1>Speak Hebrew like a native</h1>
+            <p class="subtitle">Level A • Beginner Course • Online </p>
+        </div>
+        
+        <div class="content">
+            <div class="intro">
+                Leran Hebrew from alphabet to conversations in 18 lessons. 
+            </div>
+            
+            <div class="quick-facts">
+                <p><strong>18 lessons</strong> • 60 minutes each</p>
+                <p><strong>Evening hours</strong> • 19:30-23:00</p>
+                <p><strong>A1 + A2</strong> • Beginners level</p>
+            </div>
+            
+            <div class="section">
+                <h2>What You'll Learn</h2>
+                <div class="topics">
+                    <div class="topic-item">Reading & writing</div>
+                    <div class="topic-item">Speaking & conversations</div>
+                    <div class="topic-item">Grammar (present & past)</div>
+                    <div class="topic-item">Vocabulary for daily life</div>
+                    <div class="topic-item">Israeli culture & songs</div>
+                    <div class="topic-item">Homework & final exam</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Pricing</h2>
+                
+                <div class="special-offer">
+                    10% off for the first 3 students to register
+                </div>
+                
+                <div class="pricing-container">
+                    <div class="pricing-card">
+                        <h3>Private</h3>
+                        <div class="price">€450</div>
+                        <div class="per-lesson">€25 per lesson</div>
+                        <p class="info">One-on-one</p>
+                        <p class="info">Start now</p>
+                        <div class="discount">First 3: €405</div>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <h3>Group</h3>
+                        <div class="price">€360</div>
+                        <div class="per-lesson">€20 per lesson</div>
+                        <p class="info">Up to 5 people</p>
+                        <p class="info">Starts January 2026</p>
+                        <div class="discount">First 3: €324</div>
+                    </div>
+                </div>
+                
+                <div class="payment-info">
+                    <p>Payment in 3 installments: Upon registration • After 6 lessons • After 12 lessons</p>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Ready to Start?</h2>
+                <p>Register now and secure your early discount</p>
+                
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeBJ2rAYS3BofqxAO7p2cJIorF3fRBciSdoQ1uNJq7g1ALZbA/viewform" 
+                   target="_blank" 
+                   class="cta-button">
+                    Sign Up
+                </a>
+                
+                <div class="contact-info">
+                    <p><strong>Questions?</strong></p>
+                    <p>Phone: <a href="tel:+351964017071">+351 964 017 071</a></p>
+                    <p>Email: <a href="mailto:tnidam@gmail.com">tnidam@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
